@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Autenticación y conexión a Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("path/to/google.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("templates/data/io/google.json", scope)
 client = gspread.authorize(creds)
 
 # Selecciona tu Google Sheet
